@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input id="soundId" placeholder="Roblox Sound ID">
+  <button onclick="playSound()">再生</button>
+  <audio id="audioPlayer" controls></audio>
+
+  <script>
+    function playSound() {
+      const id = document.getElementById("soundId").value;
+      const audio = document.getElementById("audioPlayer");
+      audio.src = `https://your-vercel-domain.vercel.app/api/play?id=${id}`;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
